@@ -9,7 +9,12 @@ import java.sql.Statement;
 public class HumanPresenceSimulation 
 {
 	
-	
+	public boolean getHumanPresenceStatus(String time)
+	{
+		boolean humanPresenceStatus = false;
+		
+		return humanPresenceStatus;
+	}
 	
 	/*public static void main( String args[] )
 	  {
