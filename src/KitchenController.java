@@ -3,6 +3,7 @@ import com.systemj.ClockDomain;
 import com.systemj.Signal;
 import com.systemj.input_Channel;
 import com.systemj.output_Channel;
+import Simulation.*;//test.sysj line: 1, column: 1
 
 public class KitchenController extends ClockDomain{
   public KitchenController(String name){super(name);}
@@ -17,13 +18,13 @@ public class KitchenController extends ClockDomain{
   private Signal humanPresence_12;
   private Signal lightState_12;
   private Signal lightIntensity_12;
-  private boolean temp_thread_14;//test.sysj line: 66, column: 4
-  private double temp_thread_15;//test.sysj line: 73, column: 4
-  private boolean temp_thread_16;//test.sysj line: 80, column: 4
-  private boolean temp_humanPresence_thread_17;//test.sysj line: 87, column: 4
-  private boolean temp_lightStatus_thread_17;//test.sysj line: 88, column: 4
-  private double temp_lightIntensity_thread_17;//test.sysj line: 89, column: 4
-  private double LIGHT_INTENSITY_LIMIT_thread_17;//test.sysj line: 90, column: 4
+  private boolean temp_thread_14;//test.sysj line: 70, column: 4
+  private double temp_thread_15;//test.sysj line: 77, column: 4
+  private boolean temp_thread_16;//test.sysj line: 84, column: 4
+  private boolean temp_humanPresence_thread_17;//test.sysj line: 91, column: 4
+  private boolean temp_lightStatus_thread_17;//test.sysj line: 92, column: 4
+  private double temp_lightIntensity_thread_17;//test.sysj line: 93, column: 4
+  private double LIGHT_INTENSITY_LIMIT_thread_17;//test.sysj line: 94, column: 4
   private int S249 = 1;
   private int S246 = 1;
   private int S185 = 1;
@@ -58,7 +59,7 @@ public class KitchenController extends ClockDomain{
         break;
       
       case 1 : 
-        if(lightState_12.getprestatus()){//test.sysj line: 86, column: 62
+        if(lightState_12.getprestatus()){//test.sysj line: 90, column: 62
           S242=0;
           active[20]=0;
           ends[20]=0;
@@ -83,7 +84,7 @@ public class KitchenController extends ClockDomain{
         break;
       
       case 1 : 
-        if(lightIntensity_12.getprestatus()){//test.sysj line: 86, column: 36
+        if(lightIntensity_12.getprestatus()){//test.sysj line: 90, column: 36
           S239=0;
           active[19]=0;
           ends[19]=0;
@@ -108,7 +109,7 @@ public class KitchenController extends ClockDomain{
         break;
       
       case 1 : 
-        if(humanPresence_12.getprestatus()){//test.sysj line: 86, column: 11
+        if(humanPresence_12.getprestatus()){//test.sysj line: 90, column: 11
           S236=0;
           active[18]=0;
           ends[18]=0;
@@ -153,20 +154,20 @@ public class KitchenController extends ClockDomain{
         }
         //FINXME code
         if(biggest299 == 0){
-          temp_humanPresence_thread_17 = ((boolean)humanPresence_12.getpreval());//test.sysj line: 87, column: 4
-          temp_lightStatus_thread_17 = ((boolean)lightState_12.getpreval());//test.sysj line: 88, column: 4
-          temp_lightIntensity_thread_17 = ((double)lightIntensity_12.getpreval());//test.sysj line: 89, column: 4
-          LIGHT_INTENSITY_LIMIT_thread_17 = 20.3;//test.sysj line: 90, column: 4
-          if(temp_humanPresence_thread_17 == false && temp_lightStatus_thread_17 == true) {//test.sysj line: 92, column: 4
-            System.out.println("Switch off light:kitchen");//test.sysj line: 93, column: 5
+          temp_humanPresence_thread_17 = ((boolean)humanPresence_12.getpreval());//test.sysj line: 91, column: 4
+          temp_lightStatus_thread_17 = ((boolean)lightState_12.getpreval());//test.sysj line: 92, column: 4
+          temp_lightIntensity_thread_17 = ((double)lightIntensity_12.getpreval());//test.sysj line: 93, column: 4
+          LIGHT_INTENSITY_LIMIT_thread_17 = 20.3;//test.sysj line: 94, column: 4
+          if(temp_humanPresence_thread_17 == false && temp_lightStatus_thread_17 == true) {//test.sysj line: 96, column: 4
+            System.out.println("Switch off light:kitchen");//test.sysj line: 97, column: 5
           }
-          else {//test.sysj line: 91, column: 4
-            if(temp_humanPresence_thread_17 == true && temp_lightIntensity_thread_17 < LIGHT_INTENSITY_LIMIT_thread_17 && temp_lightStatus_thread_17 == false) {//test.sysj line: 96, column: 4
-              System.out.println("Switch on light to increase brightness:kitchen");//test.sysj line: 97, column: 5
+          else {//test.sysj line: 95, column: 4
+            if(temp_humanPresence_thread_17 == true && temp_lightIntensity_thread_17 < LIGHT_INTENSITY_LIMIT_thread_17 && temp_lightStatus_thread_17 == false) {//test.sysj line: 100, column: 4
+              System.out.println("Switch on light to increase brightness:kitchen");//test.sysj line: 101, column: 5
             }
-            else {//test.sysj line: 95, column: 9
-              if(temp_humanPresence_thread_17 == true && temp_lightIntensity_thread_17 >= LIGHT_INTENSITY_LIMIT_thread_17 && temp_lightStatus_thread_17 == true) {//test.sysj line: 100, column: 4
-                System.out.println("Light Intensity is high. Switch off light to save energy:kitchen");//test.sysj line: 101, column: 5
+            else {//test.sysj line: 99, column: 9
+              if(temp_humanPresence_thread_17 == true && temp_lightIntensity_thread_17 >= LIGHT_INTENSITY_LIMIT_thread_17 && temp_lightStatus_thread_17 == true) {//test.sysj line: 104, column: 4
+                System.out.println("Light Intensity is high. Switch off light to save energy:kitchen");//test.sysj line: 105, column: 5
               }
             }
           }
@@ -191,8 +192,8 @@ public class KitchenController extends ClockDomain{
       case 1 : 
         switch(S216){
           case 0 : 
-            if(!lightStatus_in.isPartnerPresent() || lightStatus_in.isPartnerPreempted()){//test.sysj line: 79, column: 4
-              lightStatus_in.setACK(false);//test.sysj line: 79, column: 4
+            if(!lightStatus_in.isPartnerPresent() || lightStatus_in.isPartnerPreempted()){//test.sysj line: 83, column: 4
+              lightStatus_in.setACK(false);//test.sysj line: 83, column: 4
               S216=1;
               active[16]=1;
               ends[16]=1;
@@ -201,18 +202,18 @@ public class KitchenController extends ClockDomain{
             else {
               switch(S211){
                 case 0 : 
-                  if(!lightStatus_in.isREQ()){//test.sysj line: 79, column: 4
-                    lightStatus_in.setACK(true);//test.sysj line: 79, column: 4
+                  if(!lightStatus_in.isREQ()){//test.sysj line: 83, column: 4
+                    lightStatus_in.setACK(true);//test.sysj line: 83, column: 4
                     S211=1;
-                    if(lightStatus_in.isREQ()){//test.sysj line: 79, column: 4
-                      lightStatus_in.setACK(false);//test.sysj line: 79, column: 4
+                    if(lightStatus_in.isREQ()){//test.sysj line: 83, column: 4
+                      lightStatus_in.setACK(false);//test.sysj line: 83, column: 4
                       ends[16]=2;
-                      ;//test.sysj line: 79, column: 4
-                      temp_thread_16 = ((Boolean)lightStatus_in.getVal());//test.sysj line: 80, column: 4
-                      System.out.println("Con:Light status: " + temp_thread_16);//test.sysj line: 81, column: 4
-                      lightState_12.setPresent();//test.sysj line: 82, column: 4
+                      ;//test.sysj line: 83, column: 4
+                      temp_thread_16 = ((Boolean)lightStatus_in.getVal());//test.sysj line: 84, column: 4
+                      System.out.println("Con:Light status: " + temp_thread_16);//test.sysj line: 85, column: 4
+                      lightState_12.setPresent();//test.sysj line: 86, column: 4
                       currsigs.addElement(lightState_12);
-                      lightState_12.setValue(temp_thread_16);//test.sysj line: 82, column: 4
+                      lightState_12.setValue(temp_thread_16);//test.sysj line: 86, column: 4
                       System.out.println("Emitted lightState_12");
                       S233=0;
                       active[16]=0;
@@ -233,15 +234,15 @@ public class KitchenController extends ClockDomain{
                   break;
                 
                 case 1 : 
-                  if(lightStatus_in.isREQ()){//test.sysj line: 79, column: 4
-                    lightStatus_in.setACK(false);//test.sysj line: 79, column: 4
+                  if(lightStatus_in.isREQ()){//test.sysj line: 83, column: 4
+                    lightStatus_in.setACK(false);//test.sysj line: 83, column: 4
                     ends[16]=2;
-                    ;//test.sysj line: 79, column: 4
-                    temp_thread_16 = ((Boolean)lightStatus_in.getVal());//test.sysj line: 80, column: 4
-                    System.out.println("Con:Light status: " + temp_thread_16);//test.sysj line: 81, column: 4
-                    lightState_12.setPresent();//test.sysj line: 82, column: 4
+                    ;//test.sysj line: 83, column: 4
+                    temp_thread_16 = ((Boolean)lightStatus_in.getVal());//test.sysj line: 84, column: 4
+                    System.out.println("Con:Light status: " + temp_thread_16);//test.sysj line: 85, column: 4
+                    lightState_12.setPresent();//test.sysj line: 86, column: 4
                     currsigs.addElement(lightState_12);
-                    lightState_12.setValue(temp_thread_16);//test.sysj line: 82, column: 4
+                    lightState_12.setValue(temp_thread_16);//test.sysj line: 86, column: 4
                     System.out.println("Emitted lightState_12");
                     S233=0;
                     active[16]=0;
@@ -262,8 +263,8 @@ public class KitchenController extends ClockDomain{
           case 1 : 
             S216=1;
             S216=0;
-            if(!lightStatus_in.isPartnerPresent() || lightStatus_in.isPartnerPreempted()){//test.sysj line: 79, column: 4
-              lightStatus_in.setACK(false);//test.sysj line: 79, column: 4
+            if(!lightStatus_in.isPartnerPresent() || lightStatus_in.isPartnerPreempted()){//test.sysj line: 83, column: 4
+              lightStatus_in.setACK(false);//test.sysj line: 83, column: 4
               S216=1;
               active[16]=1;
               ends[16]=1;
@@ -271,18 +272,18 @@ public class KitchenController extends ClockDomain{
             }
             else {
               S211=0;
-              if(!lightStatus_in.isREQ()){//test.sysj line: 79, column: 4
-                lightStatus_in.setACK(true);//test.sysj line: 79, column: 4
+              if(!lightStatus_in.isREQ()){//test.sysj line: 83, column: 4
+                lightStatus_in.setACK(true);//test.sysj line: 83, column: 4
                 S211=1;
-                if(lightStatus_in.isREQ()){//test.sysj line: 79, column: 4
-                  lightStatus_in.setACK(false);//test.sysj line: 79, column: 4
+                if(lightStatus_in.isREQ()){//test.sysj line: 83, column: 4
+                  lightStatus_in.setACK(false);//test.sysj line: 83, column: 4
                   ends[16]=2;
-                  ;//test.sysj line: 79, column: 4
-                  temp_thread_16 = ((Boolean)lightStatus_in.getVal());//test.sysj line: 80, column: 4
-                  System.out.println("Con:Light status: " + temp_thread_16);//test.sysj line: 81, column: 4
-                  lightState_12.setPresent();//test.sysj line: 82, column: 4
+                  ;//test.sysj line: 83, column: 4
+                  temp_thread_16 = ((Boolean)lightStatus_in.getVal());//test.sysj line: 84, column: 4
+                  System.out.println("Con:Light status: " + temp_thread_16);//test.sysj line: 85, column: 4
+                  lightState_12.setPresent();//test.sysj line: 86, column: 4
                   currsigs.addElement(lightState_12);
-                  lightState_12.setValue(temp_thread_16);//test.sysj line: 82, column: 4
+                  lightState_12.setValue(temp_thread_16);//test.sysj line: 86, column: 4
                   System.out.println("Emitted lightState_12");
                   S233=0;
                   active[16]=0;
@@ -320,8 +321,8 @@ public class KitchenController extends ClockDomain{
       case 1 : 
         switch(S192){
           case 0 : 
-            if(!lightIntensityValue_in.isPartnerPresent() || lightIntensityValue_in.isPartnerPreempted()){//test.sysj line: 72, column: 4
-              lightIntensityValue_in.setACK(false);//test.sysj line: 72, column: 4
+            if(!lightIntensityValue_in.isPartnerPresent() || lightIntensityValue_in.isPartnerPreempted()){//test.sysj line: 76, column: 4
+              lightIntensityValue_in.setACK(false);//test.sysj line: 76, column: 4
               S192=1;
               active[15]=1;
               ends[15]=1;
@@ -330,18 +331,18 @@ public class KitchenController extends ClockDomain{
             else {
               switch(S187){
                 case 0 : 
-                  if(!lightIntensityValue_in.isREQ()){//test.sysj line: 72, column: 4
-                    lightIntensityValue_in.setACK(true);//test.sysj line: 72, column: 4
+                  if(!lightIntensityValue_in.isREQ()){//test.sysj line: 76, column: 4
+                    lightIntensityValue_in.setACK(true);//test.sysj line: 76, column: 4
                     S187=1;
-                    if(lightIntensityValue_in.isREQ()){//test.sysj line: 72, column: 4
-                      lightIntensityValue_in.setACK(false);//test.sysj line: 72, column: 4
+                    if(lightIntensityValue_in.isREQ()){//test.sysj line: 76, column: 4
+                      lightIntensityValue_in.setACK(false);//test.sysj line: 76, column: 4
                       ends[15]=2;
-                      ;//test.sysj line: 72, column: 4
-                      temp_thread_15 = ((Double)lightIntensityValue_in.getVal());//test.sysj line: 73, column: 4
-                      System.out.println("Con:Light In: " + temp_thread_15);//test.sysj line: 74, column: 4
-                      lightIntensity_12.setPresent();//test.sysj line: 75, column: 4
+                      ;//test.sysj line: 76, column: 4
+                      temp_thread_15 = ((Double)lightIntensityValue_in.getVal());//test.sysj line: 77, column: 4
+                      System.out.println("Con:Light In: " + temp_thread_15);//test.sysj line: 78, column: 4
+                      lightIntensity_12.setPresent();//test.sysj line: 79, column: 4
                       currsigs.addElement(lightIntensity_12);
-                      lightIntensity_12.setValue(temp_thread_15);//test.sysj line: 75, column: 4
+                      lightIntensity_12.setValue(temp_thread_15);//test.sysj line: 79, column: 4
                       System.out.println("Emitted lightIntensity_12");
                       S209=0;
                       active[15]=0;
@@ -362,15 +363,15 @@ public class KitchenController extends ClockDomain{
                   break;
                 
                 case 1 : 
-                  if(lightIntensityValue_in.isREQ()){//test.sysj line: 72, column: 4
-                    lightIntensityValue_in.setACK(false);//test.sysj line: 72, column: 4
+                  if(lightIntensityValue_in.isREQ()){//test.sysj line: 76, column: 4
+                    lightIntensityValue_in.setACK(false);//test.sysj line: 76, column: 4
                     ends[15]=2;
-                    ;//test.sysj line: 72, column: 4
-                    temp_thread_15 = ((Double)lightIntensityValue_in.getVal());//test.sysj line: 73, column: 4
-                    System.out.println("Con:Light In: " + temp_thread_15);//test.sysj line: 74, column: 4
-                    lightIntensity_12.setPresent();//test.sysj line: 75, column: 4
+                    ;//test.sysj line: 76, column: 4
+                    temp_thread_15 = ((Double)lightIntensityValue_in.getVal());//test.sysj line: 77, column: 4
+                    System.out.println("Con:Light In: " + temp_thread_15);//test.sysj line: 78, column: 4
+                    lightIntensity_12.setPresent();//test.sysj line: 79, column: 4
                     currsigs.addElement(lightIntensity_12);
-                    lightIntensity_12.setValue(temp_thread_15);//test.sysj line: 75, column: 4
+                    lightIntensity_12.setValue(temp_thread_15);//test.sysj line: 79, column: 4
                     System.out.println("Emitted lightIntensity_12");
                     S209=0;
                     active[15]=0;
@@ -391,8 +392,8 @@ public class KitchenController extends ClockDomain{
           case 1 : 
             S192=1;
             S192=0;
-            if(!lightIntensityValue_in.isPartnerPresent() || lightIntensityValue_in.isPartnerPreempted()){//test.sysj line: 72, column: 4
-              lightIntensityValue_in.setACK(false);//test.sysj line: 72, column: 4
+            if(!lightIntensityValue_in.isPartnerPresent() || lightIntensityValue_in.isPartnerPreempted()){//test.sysj line: 76, column: 4
+              lightIntensityValue_in.setACK(false);//test.sysj line: 76, column: 4
               S192=1;
               active[15]=1;
               ends[15]=1;
@@ -400,18 +401,18 @@ public class KitchenController extends ClockDomain{
             }
             else {
               S187=0;
-              if(!lightIntensityValue_in.isREQ()){//test.sysj line: 72, column: 4
-                lightIntensityValue_in.setACK(true);//test.sysj line: 72, column: 4
+              if(!lightIntensityValue_in.isREQ()){//test.sysj line: 76, column: 4
+                lightIntensityValue_in.setACK(true);//test.sysj line: 76, column: 4
                 S187=1;
-                if(lightIntensityValue_in.isREQ()){//test.sysj line: 72, column: 4
-                  lightIntensityValue_in.setACK(false);//test.sysj line: 72, column: 4
+                if(lightIntensityValue_in.isREQ()){//test.sysj line: 76, column: 4
+                  lightIntensityValue_in.setACK(false);//test.sysj line: 76, column: 4
                   ends[15]=2;
-                  ;//test.sysj line: 72, column: 4
-                  temp_thread_15 = ((Double)lightIntensityValue_in.getVal());//test.sysj line: 73, column: 4
-                  System.out.println("Con:Light In: " + temp_thread_15);//test.sysj line: 74, column: 4
-                  lightIntensity_12.setPresent();//test.sysj line: 75, column: 4
+                  ;//test.sysj line: 76, column: 4
+                  temp_thread_15 = ((Double)lightIntensityValue_in.getVal());//test.sysj line: 77, column: 4
+                  System.out.println("Con:Light In: " + temp_thread_15);//test.sysj line: 78, column: 4
+                  lightIntensity_12.setPresent();//test.sysj line: 79, column: 4
                   currsigs.addElement(lightIntensity_12);
-                  lightIntensity_12.setValue(temp_thread_15);//test.sysj line: 75, column: 4
+                  lightIntensity_12.setValue(temp_thread_15);//test.sysj line: 79, column: 4
                   System.out.println("Emitted lightIntensity_12");
                   S209=0;
                   active[15]=0;
@@ -449,8 +450,8 @@ public class KitchenController extends ClockDomain{
       case 1 : 
         switch(S168){
           case 0 : 
-            if(!humanPresenceStatus_in.isPartnerPresent() || humanPresenceStatus_in.isPartnerPreempted()){//test.sysj line: 65, column: 4
-              humanPresenceStatus_in.setACK(false);//test.sysj line: 65, column: 4
+            if(!humanPresenceStatus_in.isPartnerPresent() || humanPresenceStatus_in.isPartnerPreempted()){//test.sysj line: 69, column: 4
+              humanPresenceStatus_in.setACK(false);//test.sysj line: 69, column: 4
               S168=1;
               active[14]=1;
               ends[14]=1;
@@ -459,18 +460,18 @@ public class KitchenController extends ClockDomain{
             else {
               switch(S163){
                 case 0 : 
-                  if(!humanPresenceStatus_in.isREQ()){//test.sysj line: 65, column: 4
-                    humanPresenceStatus_in.setACK(true);//test.sysj line: 65, column: 4
+                  if(!humanPresenceStatus_in.isREQ()){//test.sysj line: 69, column: 4
+                    humanPresenceStatus_in.setACK(true);//test.sysj line: 69, column: 4
                     S163=1;
-                    if(humanPresenceStatus_in.isREQ()){//test.sysj line: 65, column: 4
-                      humanPresenceStatus_in.setACK(false);//test.sysj line: 65, column: 4
+                    if(humanPresenceStatus_in.isREQ()){//test.sysj line: 69, column: 4
+                      humanPresenceStatus_in.setACK(false);//test.sysj line: 69, column: 4
                       ends[14]=2;
-                      ;//test.sysj line: 65, column: 4
-                      temp_thread_14 = ((Boolean)humanPresenceStatus_in.getVal());//test.sysj line: 66, column: 4
-                      System.out.println("Con:Hum Pre: " + temp_thread_14);//test.sysj line: 67, column: 4
-                      humanPresence_12.setPresent();//test.sysj line: 68, column: 4
+                      ;//test.sysj line: 69, column: 4
+                      temp_thread_14 = ((Boolean)humanPresenceStatus_in.getVal());//test.sysj line: 70, column: 4
+                      System.out.println("Con:Hum Pre: " + temp_thread_14);//test.sysj line: 71, column: 4
+                      humanPresence_12.setPresent();//test.sysj line: 72, column: 4
                       currsigs.addElement(humanPresence_12);
-                      humanPresence_12.setValue(temp_thread_14);//test.sysj line: 68, column: 4
+                      humanPresence_12.setValue(temp_thread_14);//test.sysj line: 72, column: 4
                       System.out.println("Emitted humanPresence_12");
                       S185=0;
                       active[14]=0;
@@ -491,15 +492,15 @@ public class KitchenController extends ClockDomain{
                   break;
                 
                 case 1 : 
-                  if(humanPresenceStatus_in.isREQ()){//test.sysj line: 65, column: 4
-                    humanPresenceStatus_in.setACK(false);//test.sysj line: 65, column: 4
+                  if(humanPresenceStatus_in.isREQ()){//test.sysj line: 69, column: 4
+                    humanPresenceStatus_in.setACK(false);//test.sysj line: 69, column: 4
                     ends[14]=2;
-                    ;//test.sysj line: 65, column: 4
-                    temp_thread_14 = ((Boolean)humanPresenceStatus_in.getVal());//test.sysj line: 66, column: 4
-                    System.out.println("Con:Hum Pre: " + temp_thread_14);//test.sysj line: 67, column: 4
-                    humanPresence_12.setPresent();//test.sysj line: 68, column: 4
+                    ;//test.sysj line: 69, column: 4
+                    temp_thread_14 = ((Boolean)humanPresenceStatus_in.getVal());//test.sysj line: 70, column: 4
+                    System.out.println("Con:Hum Pre: " + temp_thread_14);//test.sysj line: 71, column: 4
+                    humanPresence_12.setPresent();//test.sysj line: 72, column: 4
                     currsigs.addElement(humanPresence_12);
-                    humanPresence_12.setValue(temp_thread_14);//test.sysj line: 68, column: 4
+                    humanPresence_12.setValue(temp_thread_14);//test.sysj line: 72, column: 4
                     System.out.println("Emitted humanPresence_12");
                     S185=0;
                     active[14]=0;
@@ -520,8 +521,8 @@ public class KitchenController extends ClockDomain{
           case 1 : 
             S168=1;
             S168=0;
-            if(!humanPresenceStatus_in.isPartnerPresent() || humanPresenceStatus_in.isPartnerPreempted()){//test.sysj line: 65, column: 4
-              humanPresenceStatus_in.setACK(false);//test.sysj line: 65, column: 4
+            if(!humanPresenceStatus_in.isPartnerPresent() || humanPresenceStatus_in.isPartnerPreempted()){//test.sysj line: 69, column: 4
+              humanPresenceStatus_in.setACK(false);//test.sysj line: 69, column: 4
               S168=1;
               active[14]=1;
               ends[14]=1;
@@ -529,18 +530,18 @@ public class KitchenController extends ClockDomain{
             }
             else {
               S163=0;
-              if(!humanPresenceStatus_in.isREQ()){//test.sysj line: 65, column: 4
-                humanPresenceStatus_in.setACK(true);//test.sysj line: 65, column: 4
+              if(!humanPresenceStatus_in.isREQ()){//test.sysj line: 69, column: 4
+                humanPresenceStatus_in.setACK(true);//test.sysj line: 69, column: 4
                 S163=1;
-                if(humanPresenceStatus_in.isREQ()){//test.sysj line: 65, column: 4
-                  humanPresenceStatus_in.setACK(false);//test.sysj line: 65, column: 4
+                if(humanPresenceStatus_in.isREQ()){//test.sysj line: 69, column: 4
+                  humanPresenceStatus_in.setACK(false);//test.sysj line: 69, column: 4
                   ends[14]=2;
-                  ;//test.sysj line: 65, column: 4
-                  temp_thread_14 = ((Boolean)humanPresenceStatus_in.getVal());//test.sysj line: 66, column: 4
-                  System.out.println("Con:Hum Pre: " + temp_thread_14);//test.sysj line: 67, column: 4
-                  humanPresence_12.setPresent();//test.sysj line: 68, column: 4
+                  ;//test.sysj line: 69, column: 4
+                  temp_thread_14 = ((Boolean)humanPresenceStatus_in.getVal());//test.sysj line: 70, column: 4
+                  System.out.println("Con:Hum Pre: " + temp_thread_14);//test.sysj line: 71, column: 4
+                  humanPresence_12.setPresent();//test.sysj line: 72, column: 4
                   currsigs.addElement(humanPresence_12);
-                  humanPresence_12.setValue(temp_thread_14);//test.sysj line: 68, column: 4
+                  humanPresence_12.setValue(temp_thread_14);//test.sysj line: 72, column: 4
                   System.out.println("Emitted humanPresence_12");
                   S185=0;
                   active[14]=0;
@@ -576,9 +577,9 @@ public class KitchenController extends ClockDomain{
         break;
       
       case 1 : 
-        humanPresence_12.setClear();//test.sysj line: 62, column: 3
-        lightState_12.setClear();//test.sysj line: 62, column: 3
-        lightIntensity_12.setClear();//test.sysj line: 63, column: 3
+        humanPresence_12.setClear();//test.sysj line: 66, column: 3
+        lightState_12.setClear();//test.sysj line: 66, column: 3
+        lightIntensity_12.setClear();//test.sysj line: 67, column: 3
         thread292(tdone,ends);
         thread293(tdone,ends);
         thread294(tdone,ends);
@@ -665,8 +666,8 @@ public class KitchenController extends ClockDomain{
   public void thread282(int [] tdone, int [] ends){
         S233=1;
     S216=0;
-    if(!lightStatus_in.isPartnerPresent() || lightStatus_in.isPartnerPreempted()){//test.sysj line: 79, column: 4
-      lightStatus_in.setACK(false);//test.sysj line: 79, column: 4
+    if(!lightStatus_in.isPartnerPresent() || lightStatus_in.isPartnerPreempted()){//test.sysj line: 83, column: 4
+      lightStatus_in.setACK(false);//test.sysj line: 83, column: 4
       S216=1;
       active[16]=1;
       ends[16]=1;
@@ -674,18 +675,18 @@ public class KitchenController extends ClockDomain{
     }
     else {
       S211=0;
-      if(!lightStatus_in.isREQ()){//test.sysj line: 79, column: 4
-        lightStatus_in.setACK(true);//test.sysj line: 79, column: 4
+      if(!lightStatus_in.isREQ()){//test.sysj line: 83, column: 4
+        lightStatus_in.setACK(true);//test.sysj line: 83, column: 4
         S211=1;
-        if(lightStatus_in.isREQ()){//test.sysj line: 79, column: 4
-          lightStatus_in.setACK(false);//test.sysj line: 79, column: 4
+        if(lightStatus_in.isREQ()){//test.sysj line: 83, column: 4
+          lightStatus_in.setACK(false);//test.sysj line: 83, column: 4
           ends[16]=2;
-          ;//test.sysj line: 79, column: 4
-          temp_thread_16 = ((Boolean)lightStatus_in.getVal());//test.sysj line: 80, column: 4
-          System.out.println("Con:Light status: " + temp_thread_16);//test.sysj line: 81, column: 4
-          lightState_12.setPresent();//test.sysj line: 82, column: 4
+          ;//test.sysj line: 83, column: 4
+          temp_thread_16 = ((Boolean)lightStatus_in.getVal());//test.sysj line: 84, column: 4
+          System.out.println("Con:Light status: " + temp_thread_16);//test.sysj line: 85, column: 4
+          lightState_12.setPresent();//test.sysj line: 86, column: 4
           currsigs.addElement(lightState_12);
-          lightState_12.setValue(temp_thread_16);//test.sysj line: 82, column: 4
+          lightState_12.setValue(temp_thread_16);//test.sysj line: 86, column: 4
           System.out.println("Emitted lightState_12");
           S233=0;
           active[16]=0;
@@ -709,8 +710,8 @@ public class KitchenController extends ClockDomain{
   public void thread281(int [] tdone, int [] ends){
         S209=1;
     S192=0;
-    if(!lightIntensityValue_in.isPartnerPresent() || lightIntensityValue_in.isPartnerPreempted()){//test.sysj line: 72, column: 4
-      lightIntensityValue_in.setACK(false);//test.sysj line: 72, column: 4
+    if(!lightIntensityValue_in.isPartnerPresent() || lightIntensityValue_in.isPartnerPreempted()){//test.sysj line: 76, column: 4
+      lightIntensityValue_in.setACK(false);//test.sysj line: 76, column: 4
       S192=1;
       active[15]=1;
       ends[15]=1;
@@ -718,18 +719,18 @@ public class KitchenController extends ClockDomain{
     }
     else {
       S187=0;
-      if(!lightIntensityValue_in.isREQ()){//test.sysj line: 72, column: 4
-        lightIntensityValue_in.setACK(true);//test.sysj line: 72, column: 4
+      if(!lightIntensityValue_in.isREQ()){//test.sysj line: 76, column: 4
+        lightIntensityValue_in.setACK(true);//test.sysj line: 76, column: 4
         S187=1;
-        if(lightIntensityValue_in.isREQ()){//test.sysj line: 72, column: 4
-          lightIntensityValue_in.setACK(false);//test.sysj line: 72, column: 4
+        if(lightIntensityValue_in.isREQ()){//test.sysj line: 76, column: 4
+          lightIntensityValue_in.setACK(false);//test.sysj line: 76, column: 4
           ends[15]=2;
-          ;//test.sysj line: 72, column: 4
-          temp_thread_15 = ((Double)lightIntensityValue_in.getVal());//test.sysj line: 73, column: 4
-          System.out.println("Con:Light In: " + temp_thread_15);//test.sysj line: 74, column: 4
-          lightIntensity_12.setPresent();//test.sysj line: 75, column: 4
+          ;//test.sysj line: 76, column: 4
+          temp_thread_15 = ((Double)lightIntensityValue_in.getVal());//test.sysj line: 77, column: 4
+          System.out.println("Con:Light In: " + temp_thread_15);//test.sysj line: 78, column: 4
+          lightIntensity_12.setPresent();//test.sysj line: 79, column: 4
           currsigs.addElement(lightIntensity_12);
-          lightIntensity_12.setValue(temp_thread_15);//test.sysj line: 75, column: 4
+          lightIntensity_12.setValue(temp_thread_15);//test.sysj line: 79, column: 4
           System.out.println("Emitted lightIntensity_12");
           S209=0;
           active[15]=0;
@@ -753,8 +754,8 @@ public class KitchenController extends ClockDomain{
   public void thread280(int [] tdone, int [] ends){
         S185=1;
     S168=0;
-    if(!humanPresenceStatus_in.isPartnerPresent() || humanPresenceStatus_in.isPartnerPreempted()){//test.sysj line: 65, column: 4
-      humanPresenceStatus_in.setACK(false);//test.sysj line: 65, column: 4
+    if(!humanPresenceStatus_in.isPartnerPresent() || humanPresenceStatus_in.isPartnerPreempted()){//test.sysj line: 69, column: 4
+      humanPresenceStatus_in.setACK(false);//test.sysj line: 69, column: 4
       S168=1;
       active[14]=1;
       ends[14]=1;
@@ -762,18 +763,18 @@ public class KitchenController extends ClockDomain{
     }
     else {
       S163=0;
-      if(!humanPresenceStatus_in.isREQ()){//test.sysj line: 65, column: 4
-        humanPresenceStatus_in.setACK(true);//test.sysj line: 65, column: 4
+      if(!humanPresenceStatus_in.isREQ()){//test.sysj line: 69, column: 4
+        humanPresenceStatus_in.setACK(true);//test.sysj line: 69, column: 4
         S163=1;
-        if(humanPresenceStatus_in.isREQ()){//test.sysj line: 65, column: 4
-          humanPresenceStatus_in.setACK(false);//test.sysj line: 65, column: 4
+        if(humanPresenceStatus_in.isREQ()){//test.sysj line: 69, column: 4
+          humanPresenceStatus_in.setACK(false);//test.sysj line: 69, column: 4
           ends[14]=2;
-          ;//test.sysj line: 65, column: 4
-          temp_thread_14 = ((Boolean)humanPresenceStatus_in.getVal());//test.sysj line: 66, column: 4
-          System.out.println("Con:Hum Pre: " + temp_thread_14);//test.sysj line: 67, column: 4
-          humanPresence_12.setPresent();//test.sysj line: 68, column: 4
+          ;//test.sysj line: 69, column: 4
+          temp_thread_14 = ((Boolean)humanPresenceStatus_in.getVal());//test.sysj line: 70, column: 4
+          System.out.println("Con:Hum Pre: " + temp_thread_14);//test.sysj line: 71, column: 4
+          humanPresence_12.setPresent();//test.sysj line: 72, column: 4
           currsigs.addElement(humanPresence_12);
-          humanPresence_12.setValue(temp_thread_14);//test.sysj line: 68, column: 4
+          humanPresence_12.setValue(temp_thread_14);//test.sysj line: 72, column: 4
           System.out.println("Emitted humanPresence_12");
           S185=0;
           active[14]=0;
@@ -796,9 +797,9 @@ public class KitchenController extends ClockDomain{
 
   public void thread279(int [] tdone, int [] ends){
         S246=1;
-    humanPresence_12.setClear();//test.sysj line: 62, column: 3
-    lightState_12.setClear();//test.sysj line: 62, column: 3
-    lightIntensity_12.setClear();//test.sysj line: 63, column: 3
+    humanPresence_12.setClear();//test.sysj line: 66, column: 3
+    lightState_12.setClear();//test.sysj line: 66, column: 3
+    lightIntensity_12.setClear();//test.sysj line: 67, column: 3
     thread280(tdone,ends);
     thread281(tdone,ends);
     thread282(tdone,ends);

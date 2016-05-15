@@ -1,3 +1,5 @@
+import Simulation.*;
+
 Kitchen(output Boolean channel lightStatus;output Boolean channel humanPresenceStatus; output Double channel lightIntensityValue;)->
 {	
 	{
@@ -21,6 +23,8 @@ Kitchen(output Boolean channel lightStatus;output Boolean channel humanPresenceS
 		//Reaction: Human Presence Sensor
 		boolean signal isHumanPresent;
 		{
+			//HumanPresenceSimulation humanPresenceSimulation = new HumanPresenceSimulation();
+			//boolean temp = humanPresenceSimulation.getHumanPresenceStatus("07:24:00");
 			boolean temp = true;//simulated value - DB call
 			emit isHumanPresent(temp);
 		}

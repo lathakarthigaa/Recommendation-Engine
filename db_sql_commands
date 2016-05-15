@@ -30,3 +30,5 @@ select count(*) from human_presence;
 delete from human_presence; where Time_of_the_day like '01%';
 
 select *,count(*) from human_presence group by Time_of_the_day,isHumanPresent having count(*)>1;
+
+SELECT Time_of_the_day,isHumanPresent FROM human_presence where Time_of_the_day='02:14:00'
