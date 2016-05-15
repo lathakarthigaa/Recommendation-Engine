@@ -1,0 +1,14 @@
+<System xmlns="http://systemjtechnology.com">
+	<SubSystem Name="ss" Local="true">
+		<ClockDomain Name="Kitchen"  Class="Kitchen">
+			<oChannel Name="humanPresenceStatus" To="KitchenController.humanPresenceStatus"/>
+			<oChannel Name="lightIntensityValue" To="KitchenController.lightIntensityValue"/>
+			<oChannel Name="lightStatus" To="KitchenController.lightStatus"/>
+		</ClockDomain>
+		<ClockDomain Name="KitchenController"  Class="KitchenController">
+			<iChannel Name="humanPresenceStatus" From="Kitchen.humanPresenceStatus"/>
+			<iChannel Name="lightIntensityValue" From="Kitchen.lightIntensityValue"/>
+			<iChannel Name="lightStatus" From="Kitchen.lightStatus"/>
+		</ClockDomain>
+	</SubSystem>
+</System>
