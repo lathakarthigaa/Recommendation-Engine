@@ -50,7 +50,7 @@ Kitchen(output Boolean channel lightStatus;output Boolean channel humanPresenceS
 	}
 	||
 	{
-		//Reaction: Fridge
+		//Reaction: Fridge (Power Profile added)
 	}
 }
 
